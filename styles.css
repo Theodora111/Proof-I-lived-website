@@ -1,0 +1,111 @@
+/* ========================================================= */
+/* GLOBAL SETTINGS                                            */
+/* ========================================================= */
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --header-font-size: 160px;
+  --header-padding: 10px;
+  --header-border: 5px;
+  --header-height: 30px;
+
+  --row-height: 6cm;
+  --row-gap: 0.5cm;
+
+  --step: 1.3cm;
+}
+
+/* ========================================================= */
+/* HEADER                                                     */
+/* ========================================================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgb(255, 255, 255);
+  font-size: 55px;
+  font-weight: bold;
+  padding: var(--header-padding) 0;
+  border-bottom: none;
+  z-index: 2000;
+}
+
+/* ========================================================= */
+/* COLUMNS                                                    */
+/* ========================================================= */
+
+.columns {
+  display: grid;
+  grid-template-columns: 10cm 1cm 30cm;
+  margin-top: calc(var(--header-height) + 1cm);
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  height: var(--row-height);
+  margin-bottom: var(--row-gap);
+}
+
+
+
+
+/* ========================================================= */
+/* STICKY BOX                                                 */
+/* ========================================================= */
+
+.box {
+  position: sticky;
+  width: 100%;
+  height: 5cm;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  margin-bottom: 1cm;
+  z-index: 100;
+
+  text-align: left;   /* centers all text lines */
+}
+
+/* text only */
+.box p {
+  margin: 0;
+  line-height: 1.6;
+  max-width: 75%;
+  text-align: left;
+}
+
+/* images stay untouched */
+.box img {
+  display: block;
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+
+
+/* staircase stacking */
+.row1 { top: calc(var(--header-height) + var(--step) * 0); }
+.row2 { top: calc(var(--header-height) + var(--step) * 1); }
+.row3 { top: calc(var(--header-height) + var(--step) * 2); }
+.row4 { top: calc(var(--header-height) + var(--step) * 3); }
+.row5 { top: calc(var(--header-height) + var(--step) * 4); }
+.row6 { top: calc(var(--header-height) + var(--step) * 5); }
+.row7 { top: calc(var(--header-height) + var(--step) * 6); }
+.row8 { top: calc(var(--header-height) + var(--step) * 7); }
+.row9 { top: calc(var(--header-height) + var(--step) * 8); }
+
+
+/* ========================================================= */
+/* IMAGES                                                     */
+/* ========================================================= */
